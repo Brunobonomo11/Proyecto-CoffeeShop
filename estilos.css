@@ -24,6 +24,12 @@ html{
     margin: 0 auto;
 }
 
+.heading-1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
 /* HEADER */
 
 .container-hero {
@@ -325,4 +331,82 @@ html{
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+}
+
+.card-category p {
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.card-category p::after {
+    content: '';
+    width: 2.5rem;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.card-category span {
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-category span:hover {
+    color: var(--primary-color);
+}
+
+/*  TOP PRODUCTS  */
+
+.top-products {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.container-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container-options span {
+    color: #777;
+    background-color: #fff;
+    padding: .7rem 3rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.container-options span:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.container-options span.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/*  PRODUCTS */
+
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.card-product {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 5rem;
+    cursor: pointer;
 }
